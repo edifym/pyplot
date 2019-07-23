@@ -1,7 +1,7 @@
 import pickle
 import matplotlib.pyplot as plt
 
-dicts = [('dict-15m', 15), ('dict-30m', 30), ('dict-45m', 45), ('dict-60m', 60), ('dict-75m', 75), ('dict-all', 240)]
+dicts = [('dict-15m', 15), ('dict-30m', 30), ('dict-45m', 45), ('dict-60m', 60), ('dict-75m', 75), ('dict-90m', 90), ('dict-120m', 120), ('dict-150m', 150), ('dict-all', 240)]
 for dict, time in dicts:
     values_dict = {}
     with open(f'{dict}.pkl', 'rb') as handle:
@@ -29,8 +29,8 @@ for dict, time in dicts:
     print(f'{times}\n{prevalence}')
 
     ax.plot(times, prevalence)
-    ax.set_ylabel('occurances')
-    ax.set_xlabel('µs')
+    ax.set_ylabel('no. of occurances')
+    ax.set_xlabel('runtime (µs)')
     ax.set_xlim(100, 380)
     ax.set_title(f'Execution distribution at {time} minutes')
     #ax.set_ylim(ymin=0)
