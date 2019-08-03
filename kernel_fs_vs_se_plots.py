@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
-fig.set_size_inches(25.6, 14.4)
+fig.set_size_inches(12, 8)
 plt.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.95, wspace=0, hspace=0)
 
 
